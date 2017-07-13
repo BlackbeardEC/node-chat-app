@@ -1,6 +1,9 @@
 const moment = require('moment');
 
 var generateMessage = (from, text) => {
+  if(text.length <= 0){
+    return
+  }
   return {
     from,
     text,

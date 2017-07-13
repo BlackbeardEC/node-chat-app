@@ -21,6 +21,9 @@ io.on('connection', (socket)=>{
   socket.broadcast.emit('newMessage', generateMessage('Admin', 'New user joined.'));
 
   socket.on('createMessage', (msg, callback)=>{
+    if(msg.text.length <= 0){
+      return
+    }
     console.log('createMessage:', msg);
 
     io.emit('newMessage', generateMessage(msg.from, msg.text));
