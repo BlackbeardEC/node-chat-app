@@ -26,6 +26,7 @@ describe('generateLocationMessage', ()=>{
     expect(location.createdAt).toBeA('number');
     expect(location.url).toBe('https://www.google.com/maps?q=1,1');
     expect(location.from).toBe(from);
+    expect(location.createdAt).toBeA('number');
 
     done();
   });
