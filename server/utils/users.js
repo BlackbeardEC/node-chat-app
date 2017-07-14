@@ -41,6 +41,16 @@ class Users {
     return namesArray;
   }
 
+  getRooms(){
+    // var rooms = this.users.filter((user) => {
+    //   return user.room.toLowerCase();
+    // });
+    // // return jQuery.unique(rooms);
+    // return rooms;
+    var rooms = this.users.map((user) => user.room);
+    return Array.from(new Set(rooms));
+  }
+
 }
 
 // class Person {

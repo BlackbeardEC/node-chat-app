@@ -19,7 +19,8 @@
           </div>
           <div class="form-field">
             <label>Room Name</label>
-            <input type="text" name="room" />
+            <input type="text" name="room" id="room"/>
+            <select id="selector" onchange="document.getElementById('room').value=this.options[this.selectedIndex].text;"></select>
           </div>
           <div class="form-field">
             <button>Join</button>
@@ -27,5 +28,8 @@
         </form>
       </div>
     </div>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="/js/libs/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/js/index.js"></script>
   </body>
 </html>
